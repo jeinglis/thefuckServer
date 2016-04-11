@@ -1,4 +1,4 @@
-from thefuck.corrector import get_corrected_commands
+#from thefuck.corrector import get_corrected_commands
 from .sender import send_to_client
 
 

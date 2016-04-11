@@ -1,7 +1,6 @@
 from socket import *
 import pickle
 
-
 def send_to_client( corrected_commands, connection_socket):
     # connectionSocket.send(str(len(correctedCommands)))
     # for items in correctedCommands:
