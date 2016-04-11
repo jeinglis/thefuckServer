@@ -1,6 +1,7 @@
 from communication.receiver import listen_for_connection
 import sys
 
+
 def main():
     port = 0
     port = int(sys.argv[1])
