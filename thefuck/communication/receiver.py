@@ -1,6 +1,6 @@
 from socket import *
-from . import client_facade
-from . import sender
+from communication import client_facade
+from communication import sender
 import pickle
 
 def listen_for_connection(port):
