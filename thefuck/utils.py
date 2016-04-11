@@ -98,7 +98,7 @@ def get_closest(word, possibilities, n=3, cutoff=0.6, fallback_to_first=True):
 
 @memoize
 def get_all_executables():
-    from thefuck.shells import shell
+    from shells import shell
 
     def _safe(fn, fallback):
         try:
@@ -283,7 +283,7 @@ def get_valid_history_without_current(command):
         if history:
             yield history[-1]
 
-    from thefuck.shells import shell
+    from shells import shell
     history = shell.get_history()
     tf_alias = get_alias()
     executables = get_all_executables()
