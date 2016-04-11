@@ -2,8 +2,8 @@ import io
 import os
 import shlex
 import six
-from ..utils import memoize
-from ..conf import settings
+from utils import memoize
+from conf import settings
 
 
 class Generic(object):

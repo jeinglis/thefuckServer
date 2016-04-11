@@ -1,7 +1,5 @@
 from pathlib import Path
-from .conf import settings
-from .types import Rule
-from . import logs
+from thefucktypes import Rule
 
 from thefuck.rules.git import git_category
 from thefuck.rules.brew import brew_category
@@ -50,13 +48,13 @@ def get_categories(command):
 
     for category, match_func in CATEGORIES.items():
         if match_func(command):
-            logs.debug("Using category: " + category)
+            print("Using category: " + category)    
             rules += Path(__file__).parent \
                 .joinpath('rules') \
                 .joinpath(category) \
                 .glob('*.py')
         else:
-            logs.debug("Ignoring category: " + category)
+            print("Ignoring category: " + category) 
 
     return rules
 
@@ -95,7 +93,7 @@ def organize_commands(corrected_commands):
         without_duplicates,
         key=lambda corrected_command: corrected_command.priority)
 
-    logs.debug('Corrected commands: '.format(
+    print('Corrected commands: '.format(    
         ', '.join(u'{}'.format(cmd) for cmd in [first_command] + sorted_commands)))
 
     for command in sorted_commands:

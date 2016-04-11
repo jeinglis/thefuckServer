@@ -4,12 +4,12 @@ import os
 import sys
 import six
 from psutil import Process, TimeoutExpired
-from . import logs
-from .shells import shell
-from .conf import settings
-from .const import DEFAULT_PRIORITY, ALL_ENABLED
-from .exceptions import EmptyCommand
-from .utils import compatibility_call
+import logs
+from shells import shell
+from conf import settings
+from const import DEFAULT_PRIORITY, ALL_ENABLED
+from exceptions import EmptyCommand
+from utils import compatibility_call
 
 
 class Command(object):

@@ -4,7 +4,7 @@ import pkg_resources
 import re
 import shelve
 import six
-from .conf import settings
+from conf import settings
 from contextlib import closing
 from decorator import decorator
 from difflib import get_close_matches

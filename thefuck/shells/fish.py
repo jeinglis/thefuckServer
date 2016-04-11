@@ -1,8 +1,8 @@
 from subprocess import Popen, PIPE
 from time import time
 import os
-from ..utils import DEVNULL, memoize, cache
-from .generic import Generic
+from utils import DEVNULL, memoize, cache
+from shells.generic import Generic
 
 
 class Fish(Generic):

@@ -1,7 +1,7 @@
 import os
-from ..conf import settings
-from ..utils import memoize
-from .generic import Generic
+from conf import settings
+from utils import memoize
+from shells.generic import Generic
 
 
 class Bash(Generic):

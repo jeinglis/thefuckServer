@@ -1,8 +1,8 @@
 from subprocess import Popen, PIPE
 from time import time
 import os
-from ..utils import DEVNULL, memoize
-from .generic import Generic
+from utils import DEVNULL, memoize
+from shells.generic import Generic
 
 
 class Tcsh(Generic):
