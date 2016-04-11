@@ -19,11 +19,14 @@ def get_loaded_rules(rules_paths):
     :rtype: Iterable[Rule]
 
     """
+    rules = []
     for path in rules_paths:
         if path.name != '__init__.py' and not path.name.endswith('_category.py'):
             rule = Rule.from_path(path)
             if rule.is_enabled:
-                yield rule
+                # yield rule
+                rules.append(rule)
+    return rules
 
 
 def get_categories(command):
@@ -66,8 +69,7 @@ def get_rules(command):
 
     """
     bundled = get_categories(command)
-    user = settings.user_dir.joinpath('rules').glob('*.py')
-    return sorted(get_loaded_rules(sorted(bundled) + sorted(user)),
+    return sorted(get_loaded_rules(sorted(bundled)),
                   key=lambda rule: rule.priority)
 
 
@@ -80,7 +82,7 @@ def organize_commands(corrected_commands):
     """
     try:
         first_command = next(corrected_commands)
-        yield first_command
+        return [first_command]
     except StopIteration:
         return
 
@@ -96,8 +98,9 @@ def organize_commands(corrected_commands):
     print('Corrected commands: '.format(    
         ', '.join(u'{}'.format(cmd) for cmd in [first_command] + sorted_commands)))
 
-    for command in sorted_commands:
-        yield command
+    return sorted_commands
+    # for command in sorted_commands:
+        # yield command
 
 
 def get_corrected_commands(command):
