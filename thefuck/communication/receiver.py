@@ -12,8 +12,8 @@ def listen_for_connection(port):
     while 1:
         connection_socket, addr = server_socket.accept()
         command = pickle.loads(connection_socket.recv(1024))
-        #send_for_correction(command, connection_socket)
-        send_back(command, connection_socket)
+        send_for_correction(command, connection_socket)
+        #send_back(command, connection_socket)
 
 
 def send_for_correction(command, connection_socket):
