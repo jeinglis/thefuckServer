@@ -1,4 +1,4 @@
-from thefuck import utils
+import utils
 from utils import replace_argument
 from specific.git import git_support
 
