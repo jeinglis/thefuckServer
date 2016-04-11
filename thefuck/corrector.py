@@ -1,16 +1,16 @@
 from pathlib import Path
 from thefucktypes import Rule
 
-from thefuck.rules.git import git_category
-from thefuck.rules.brew import brew_category
-from thefuck.rules.django import django_category
-from thefuck.rules.grep import grep_category
-from thefuck.rules.grep import grep_category
-from thefuck.rules.cargo import cargo_category
-from thefuck.rules.maven import maven_category
-from thefuck.rules.rm import rm_category
-from thefuck.rules.cd import cd_category
-from thefuck.rules.tsuru import tsuru_category
+from rules.git import git_category
+from rules.brew import brew_category
+from rules.django import django_category
+from rules.grep import grep_category
+from rules.grep import grep_category
+from rules.cargo import cargo_category
+from rules.maven import maven_category
+from rules.rm import rm_category
+from rules.cd import cd_category
+from rules.tsuru import tsuru_category
 
 def get_loaded_rules(rules_paths):
     """Yields all available rules.
