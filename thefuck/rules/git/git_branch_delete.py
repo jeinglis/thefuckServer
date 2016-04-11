@@ -1,5 +1,5 @@
-from thefuck.utils import replace_argument
-from thefuck.specific.git import git_support
+from utils import replace_argument
+from specific.git import git_support
 
 
 @git_support

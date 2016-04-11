@@ -1,8 +1,8 @@
 import re
 import os
-from thefuck.utils import memoize, default_settings
-from thefuck.conf import settings
-from thefuck.shells import shell
+from utils import memoize, default_settings
+from conf import settings
+from shells import shell
 
 
 # order is important: only the first match is considered

@@ -1,6 +1,6 @@
 import re
-from thefuck.shells import shell
-from thefuck.specific.git import git_support
+from shells import shell
+from specific.git import git_support
 
 
 @git_support

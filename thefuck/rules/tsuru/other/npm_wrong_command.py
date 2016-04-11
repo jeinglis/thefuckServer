@@ -1,5 +1,5 @@
-from thefuck.utils import replace_argument, for_app, eager, get_closest
-from thefuck.specific.sudo import sudo_support
+from utils import replace_argument, for_app, eager, get_closest
+from specific.sudo import sudo_support
 
 
 def _get_wrong_command(script_parts):

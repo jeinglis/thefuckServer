@@ -1,8 +1,8 @@
 from itertools import dropwhile, takewhile, islice
 import re
 import subprocess
-from thefuck.utils import replace_command, for_app
-from thefuck.specific.sudo import sudo_support
+from utils import replace_command, for_app
+from specific.sudo import sudo_support
 
 
 @sudo_support

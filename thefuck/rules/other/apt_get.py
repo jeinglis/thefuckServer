@@ -1,6 +1,6 @@
-from thefuck.specific.apt import apt_available
-from thefuck.utils import memoize
-from thefuck.shells import shell
+from specific.apt import apt_available
+from utils import memoize
+from shells import shell
 
 try:
     import CommandNotFound

@@ -5,7 +5,7 @@
 # The file ~/github.com does not exist.
 # Perhaps you meant 'http://github.com'?
 #
-from thefuck.utils import for_app
+from utils import for_app
 
 
 @for_app('open', 'xdg-open', 'gnome-open', 'kde-open')

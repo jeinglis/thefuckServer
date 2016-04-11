@@ -15,7 +15,7 @@ class Settings(dict):
 
     def init(self):
         """Fills `settings` with values from `settings.py` and env."""
-        from .logs import exception
+        from logs import exception
 
         self._setup_user_dir()
         self._init_settings_file()
